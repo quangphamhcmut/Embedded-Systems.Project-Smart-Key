@@ -15,4 +15,4 @@ This is the repository for our project in Embedded System Course at HCMUT and it
 
 ## Block diagram
 
-![Block diagram](./homework/smart_key_system_diagram.png) 
+![Block diagram](./homework1/smart_key_system_diagram.png) 
