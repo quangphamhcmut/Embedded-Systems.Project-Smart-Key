@@ -24,13 +24,13 @@ This is the repository for our project in Embedded System Course at HCMUT and it
 | Components |     |
 | ------------- |  ------------- |
 | *nRF24L01+* RF module | <ul> 
-    <li> Communicate with MCU via SPI protocol </li>
-    <li> Auto acknowlegdenment when transmitting </li>
-    <li> Controlable transmitting power </li> 
-    <li> Great range </li>
-    <li> Wide operating voltage </li>
-    <li> Ultra low power down consumption </li>
-</ul> |
+  <li> Communicate with MCU via SPI protocol </li>
+  <li> Auto acknowlegdenment when transmitting </li>
+  <li> Controlable transmitting power </li> 
+  <li> Great range </li>
+  <li> Wide operating voltage </li>
+  <li> Ultra low power down consumption </li>
+  </ul> |
 
 ## Block diagram
 
