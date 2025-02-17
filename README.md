@@ -1,8 +1,8 @@
-# Embedded-Systems.Project-Smart-Key
+# Project Smart Key
 
 This is the repository for our project in Embedded System Course at HCMUT and it also include all our homeworks.
 
-## Members {#members}
+## Members
 
 |     | Names | IDs |
 | ------------- | -------------- | -------------- |
