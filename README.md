@@ -11,7 +11,7 @@ This is the repository for our project in Embedded System Course at HCMUT and it
 | 3 | Pham Tan Quang | 2151248 |
 
 
-## Specification {#spec}
+## Specification
 
 ### Requirment table
 
