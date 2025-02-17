@@ -51,6 +51,6 @@ at the end of this project.
 | Relay | 2 | One for controlling the vehicle's power and one for vehicle's light |
 | `ATMEGA328P` MCU | 1 | Controlling |
 
-## Block diagram
+### Block diagram
 
 ![Block diagram](./homework1/smart_key_system_diagram.png) 
