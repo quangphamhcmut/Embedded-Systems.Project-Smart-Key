@@ -1,12 +1,14 @@
+<center>
+<img src="./assets/smart-key.png" width="100" alt="Logo"/> 
+
 # Smart Key System
 
-## Members
+Smart Key system is a project for Embedded Systems course at HCMUT that aims to be a affordable solution to
+bring some smart functions back to some old motorcycles. The system consist of 2 subsystems according to a 
+key and a lock respectively.
 
-|     | Names | IDs |
-| ------------- | -------------- | -------------- |
-| 1 | Luong Thanh Vy | 2151280 |
-| 2 | Nguyen Cuong Quoc | 2251045 |
-| 3 | Pham Tan Quang | 2151248 |
+</center>
+
 
 
 ## Specification
@@ -31,7 +33,7 @@
 Others electric components like resistors, conductors, capacitors, etc would be added later
 at the end of this project.
 
-- **Smart Key** requirement list:
+- 🔑 **Smart Key** requirement list:
 
 | Components | Quantity | Function |
 | ------------- | :-------------: | ------------- |
@@ -40,7 +42,7 @@ at the end of this project.
 | `CR2450` battery | 1 | Power supplying |
 | `ATMEGA328P` MCU | 1 | Controlling|
 
-- **Smart Lock** requirement list:
+- 🔒 **Smart Lock** requirement list:
 
 | Components | Quantity | Function |
 | ------------- | :-------------: | ------------- |
@@ -50,6 +52,15 @@ at the end of this project.
 | `ATMEGA328P` MCU | 1 | Controlling |
 
 ### Block diagram
-<center>
+
 ![Block diagram](./homework1/smart_key_system_diagram.png) 
-</center>
+
+
+## 💁 Our members
+
+|     | Names | IDs |
+| ------------- | -------------- | -------------- |
+| 1 | Luong Thanh Vy | 2151280 |
+| 2 | Nguyen Cuong Quoc | 2251045 |
+| 3 | Pham Tan Quang | 2151248 |
+
