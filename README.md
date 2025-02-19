@@ -13,13 +13,13 @@ key and a lock respectively.
 
 &nbsp;
 
-## Specification
+## 📝 Specification
 
-### Requirment table
+### 💻 System requirement
 
 [Requirement table](https://docs.google.com/spreadsheets/d/1nUn6pa3cHQUdWSz3ERi9wC6BmqBU7rnba5peyX5WJQM/edit?usp=sharing) 
 
-### Components
+### 🧩 Components
 
 - This project requires below coponents:
 
@@ -53,7 +53,7 @@ at the end of this project.
 | Relay | 2 | One for controlling the vehicle's power and one for vehicle's light |
 | `ATMEGA328P` MCU | 1 | Controlling |
 
-### Block diagram
+### 🔲 Block diagram
 
 ![Block diagram](./homework1/smart_key_system_diagram.png) 
 
