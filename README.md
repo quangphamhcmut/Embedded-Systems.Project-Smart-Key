@@ -1,7 +1,7 @@
-<h1 align="center">
+<h3 align="center">
 <img src="./assets/smart-key.png" width="100"/></br> 
 Smart Key System
-</h1>
+</h3>
 
 &nbsp;
 
