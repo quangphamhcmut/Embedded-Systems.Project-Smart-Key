@@ -50,5 +50,6 @@ at the end of this project.
 | `ATMEGA328P` MCU | 1 | Controlling |
 
 ### Block diagram
-
+<center>
 ![Block diagram](./homework1/smart_key_system_diagram.png) 
+</center>
