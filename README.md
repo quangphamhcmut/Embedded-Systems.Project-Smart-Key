@@ -1,13 +1,13 @@
-<center>
-<img src="./assets/smart-key.png" width="100" alt="Logo"/> 
+<h1 align="center">
+<img src="./assets/smart-key.png" width="100"/> 
+Smart Key System
+</h1>
 
-# Smart Key System
-
+<p align="center">
 Smart Key system is a project for Embedded Systems course at HCMUT that aims to be a affordable solution to
 bring some smart functions back to some old motorcycles. The system consist of 2 subsystems according to a 
 key and a lock respectively.
-
-</center>
+</p>
 
 
 
