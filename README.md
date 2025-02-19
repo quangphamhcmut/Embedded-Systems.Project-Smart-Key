@@ -1,7 +1,9 @@
 <h1 align="center">
-<img src="./assets/smart-key.png" width="100"/> 
+<img src="./assets/smart-key.png" width="100"/></br> 
 Smart Key System
 </h1>
+
+&nbsp;
 
 <p align="center">
 Smart Key system is a project for Embedded Systems course at HCMUT that aims to be a affordable solution to
