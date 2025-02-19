@@ -11,7 +11,7 @@ bring some smart functions back to some old motorcycles. The system consist of 2
 key and a lock respectively.
 </p>
 
-
+&nbsp;
 
 ## Specification
 
@@ -57,6 +57,7 @@ at the end of this project.
 
 ![Block diagram](./homework1/smart_key_system_diagram.png) 
 
+&nbsp;
 
 ## 💁 Our members
 
