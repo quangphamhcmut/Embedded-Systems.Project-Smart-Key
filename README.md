@@ -3,7 +3,7 @@
 Smart Key System
 </h3>
 
-&nbsp;
+ 
 
 <p align="center">
 Smart Key system is a project for Embedded Systems course at HCMUT that aims to be a affordable solution to
@@ -11,7 +11,7 @@ bring some smart functions back to some old motorcycles. The system consist of 2
 key and a lock respectively.
 </p>
 
-&nbsp;
+ 
 
 ## 📝 Specification
 
@@ -19,49 +19,31 @@ key and a lock respectively.
 
 Our project's goal is to mimic the commercial smart key system on modern bycicle thus
 
-1. The smartkey system must have a *Smart Key* and a *Smart Lock* subsystems.
-
-2. The smart key subsystem must operate as a key.
-
-&nbsp; &nbsp; &nbsp; &nbsp; 2.1. The key must function as a wireless key.
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.1. The key must be able to communicate wirelessly with the lock.
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.1.1. The key shall operate at a frequency of 2.4 GHz.
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.1.2. The key shall have a communication range of at least 10 meters.
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.1.3. The key shall support proximity detection.
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.2. The key must be optimize for a long term operation.
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.2.1. The key shall be working at least one years under normal using condition.
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.2.2. The power consumption shall be less than 1 mW in sleep mode and less than 50 mW during active transmission.
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.3. The key must have security features.
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.3.1. The key must support rolling code encryption or challange-response authentication to prevent replay attacks.
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.3.2. The key should implement frequency hopping to minimize RF interference and improve security.
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.4. The key should be durable and environmental resist.
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.4.1. The key shall be rated as IP65 protection standard to ensure resistance again dust and water splashes.
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.4.2. The key shall operate with a temperature range of -10°C to 60°C. 
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.1.5. The key should have lock/unlock and horn burst functions.
-
-&nbsp; &nbsp; &nbsp; &nbsp; 2.2. The key hardware should be afforable and easy to build.
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.2.1. The key should include 2 buttons for lock/unlock-ing and horn bursting features.
-
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.2.2. The key shall be powered by a wide-available, repplaceable 3V battery.
-
-3. The smart lock subsystem must function as a lock.
-
-4. The system should use low-price components and easy to source.
+| Order | Requirement |
+| ----- | ------------|
+| 1.| The smartkey system must have a *Smart Key* and a *Smart Lock* subsystems. |
+| 2.| The smart key subsystem must operate as a key. |
+| 2.1.| The key must function as a wireless key. |
+| 2.1.1. | The key must be able to communicate wirelessly with the lock. |
+| 2.1.1.1. | The key shall operate at a frequency of 2.4 GHz. |
+| 2.1.1.2. | The key shall have a communication range of at least 10 meters. |
+| 2.1.1.3. |The key shall support proximity detection. |
+| 2.1.2. | The key must be optimize for a long term operation. |
+| 2.1.2.1. | The key shall be working at least one years under normal using condition. |
+| 2.1.2.2. | The power consumption shall be less than 1 mW in sleep mode and less than 50 mW 
+             during active transmission. |
+| 2.1.3. | The key must have security features. |
+| 2.1.3.1. | The key must support rolling code encryption or challange-response authentication to prevent replay attacks. |
+| 2.1.3.2. | The key should implement frequency hopping to minimize RF interference and improve security. |
+| 2.1.4. | The key should be durable and environmental resist. |
+| 2.1.4.1. | The key shall be rated as IP65 protection standard to ensure resistance again dust and water splashes. |
+| 2.1.4.2. | The key shall operate with a temperature range of -10°C to 60°C.  |
+| 2.1.5. | The key should have lock/unlock and horn burst functions. |
+| 2.2. | The key hardware should be afforable and easy to build. |
+| 2.2.1. | The key should include 2 buttons for lock/unlock-ing and horn bursting features. |
+| 2.2.2. | The key shall be powered by a wide-available, repplaceable 3V battery. |
+| 3. | The smart lock subsystem must function as a lock. |
+| 4. | The system should use low-price components and easy to source. |
 
 ### 🧩 Components
 
@@ -103,7 +85,7 @@ at the end of this project.
 <img src="./homework1/smart_key_system_diagram.png"/>
 </p>
 
-&nbsp;
+ 
 
 ## 💁 Our members
 
