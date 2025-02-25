@@ -24,15 +24,10 @@ Our project's goal is to mimic the commercial smart key system on modern bycicle
 2. The smart key subsystem must operate as a key.
 
     2.1. The key must function as a wireless key.
-
         2.1.1. The key must be able to communicate wirelessly with the lock.
-
             2.1.1.1. The key shall operate at a frequency of 2.4 GHz.
-
             2.1.1.2. The key shall have a communication range of at least 10 meters.
-
             2.1.1.3. The key shall support proximity detection.
-
         2.1.2. The key must be optimize for a long term operation.
 
             2.1.2.1. The key shall be working at least one years under normal using condition.
