@@ -55,7 +55,7 @@ at the end of this project.
 
 ### 🔲 Block diagram
 
-<img src="./homework1/smart_key_system_diagram.png" align="center"/img>
+<img src="./homework1/smart_key_system_diagram.png" align="center"/>
 
 &nbsp;
 
