@@ -17,7 +17,34 @@ key and a lock respectively.
 
 ### 💻 System requirement
 
-[Requirement table](https://docs.google.com/spreadsheets/d/1nUn6pa3cHQUdWSz3ERi9wC6BmqBU7rnba5peyX5WJQM/edit?usp=sharing) 
+Our project's goal is to mimic the commercial smart key system on modern bycicle thus
+
+1. The smartkey system must have a *Smart Key* and a *Smart Lock* subsystems.
+2. The smart key subsystem must operate as a key.
+    1. The key must function as a wireless key.
+        1. The key must be able to communicate wirelessly with the lock.
+            1. The key shall operate at a frequency of 2.4 GHz.
+            2. The key shall have a communication range of at least 10 meters.
+            3. The key shall support proximity detection.
+        2. The key must be optimize for a long term operation.
+            1. The key shall be working at least one years under normal using condition.
+            3. The power consumption shall be less than 1 mW in sleep mode and less than 50 mW
+               during active transmission.
+        3. The key must have security features.
+            1. The key must support rolling code encryption or challange-response authentication
+               to prevent replay attacks.
+            2. The key should implement frequency hopping to minimize RF interference and improve
+               security.
+        4. The key should be durable and environmental resist.
+            1. The key shall be rated as IP65 protection standard to ensure resistance again dust
+               and water splashes.
+            2. The key shall operate with a temperature range of -10°C to 60°C. 
+        5. The key should have lock/unlock and horn burst functions.
+    2. The key hardware should be afforable and easy to build.
+        1. The key should include 2 buttons for lock/unlock-ing and horn bursting features.
+        2. The key shall be powered by a wide-available, repplaceable 3V battery.
+3. The smart lock subsystem must function as a lock.
+4. The system should use low-price components and easy to source.
 
 ### 🧩 Components
 
