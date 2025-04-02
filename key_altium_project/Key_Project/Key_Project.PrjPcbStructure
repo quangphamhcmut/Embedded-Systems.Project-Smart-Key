@@ -1,0 +1,3 @@
+Record=TopLevelDocument|FileName=KEY_PCB.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=KEY_PCB.SchDoc|FileName=Sheet1.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=KEY_PCB.SchDoc|FileName=Sheet2.SchDoc|SheetNumber=2
