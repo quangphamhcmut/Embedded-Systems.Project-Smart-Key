@@ -1,0 +1,1125 @@
+
+key.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  0000071a  2**0
+                  ALLOC, LOAD, DATA
+  1 .text         000000c8  00000000  00000000  000000b4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000003  00800100  00800100  0000071a  2**0
+                  ALLOC
+  3 .comment      0000002f  00000000  00000000  0000071a  2**0
+                  CONTENTS, READONLY
+  4 .stack.descriptors.hdr 0000000e  00000000  00000000  00000749  2**0
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000f8  00000000  00000000  00000757  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001d95  00000000  00000000  0000084f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000a42  00000000  00000000  000025e4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000954  00000000  00000000  00003026  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  0000026c  00000000  00000000  0000397c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000002e6  00000000  00000000  00003be8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000008a3  00000000  00000000  00003ece  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000b8  00000000  00000000  00004771  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .text         00000004  0000064e  0000064e  00000702  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000482c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .text.Init_Button 00000022  000005b8  000005b8  0000066c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.Reopen_Button_Port 00000036  00000582  00000582  00000636  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.SamplingButton 00000068  00000474  00000474  00000528  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.watchdogSetup 00000012  00000608  00000608  000006bc  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.Clear_Port 0000000e  0000061a  0000061a  000006ce  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text.__vector_6 00000080  000003f4  000003f4  000004a8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.main    00000048  0000053a  0000053a  000005ee  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.nrf24_send_spi 0000005e  000004dc  000004dc  00000590  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .text.nrf24_write 00000008  00000640  00000640  000006f4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 24 .text.nrf24_read 00000006  00000648  00000648  000006fc  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 25 .text.Init_RF_Port 00000018  000005da  000005da  0000068e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 26 .text.Init_RF 00000144  000000c8  000000c8  0000017c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 27 .text.nrf24_state 000000f8  0000020c  0000020c  000002c0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 28 .text.nrf24_send_message 000000f0  00000304  00000304  000003b8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 29 .data.tx_address 00000005  00800103  0000065c  00000710  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 30 .data.rx_address 00000005  00800108  00000661  00000715  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 31 .text.Init_SPI 0000000c  00000628  00000628  000006dc  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 32 .text.SPI_MasterTransmit 0000000c  00000634  00000634  000006e8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 33 .text.__dummy_fini 00000002  00000656  00000656  0000070a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 34 .text.__dummy_funcs_on_exit 00000002  00000658  00000658  0000070c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 35 .text.__dummy_simulator_exit 00000002  0000065a  0000065a  0000070e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 36 .text.exit    00000016  000005f2  000005f2  000006a6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 37 .text._Exit   00000004  00000652  00000652  00000706  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 3a 00 	jmp	0x74	; 0x74 <__ctors_end>
+   4:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+   8:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+   c:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  10:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  14:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  18:	0c 94 fa 01 	jmp	0x3f4	; 0x3f4 <__vector_6>
+  1c:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  20:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  24:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  28:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  2c:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  30:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  34:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  38:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  3c:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  40:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  44:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  48:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  4c:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  50:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  54:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  58:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  5c:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  60:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+  64:	0c 94 27 03 	jmp	0x64e	; 0x64e <__bad_interrupt>
+
+00000068 <.dinit>:
+  68:	01 00       	.word	0x0001	; ????
+  6a:	01 03       	mulsu	r16, r17
+  6c:	80 01       	movw	r16, r0
+  6e:	03 01       	movw	r0, r6
+  70:	0d 00       	.word	0x000d	; ????
+  72:	06 5c       	subi	r16, 0xC6	; 198
+
+00000074 <__ctors_end>:
+  74:	11 24       	eor	r1, r1
+  76:	1f be       	out	0x3f, r1	; 63
+  78:	cf ef       	ldi	r28, 0xFF	; 255
+  7a:	d8 e0       	ldi	r29, 0x08	; 8
+  7c:	de bf       	out	0x3e, r29	; 62
+  7e:	cd bf       	out	0x3d, r28	; 61
+
+00000080 <__do_copy_data>:
+  80:	e8 e6       	ldi	r30, 0x68	; 104
+  82:	f0 e0       	ldi	r31, 0x00	; 0
+  84:	40 e0       	ldi	r20, 0x00	; 0
+  86:	17 c0       	rjmp	.+46     	; 0xb6 <__do_clear_bss+0x8>
+  88:	b5 91       	lpm	r27, Z+
+  8a:	a5 91       	lpm	r26, Z+
+  8c:	35 91       	lpm	r19, Z+
+  8e:	25 91       	lpm	r18, Z+
+  90:	05 91       	lpm	r16, Z+
+  92:	07 fd       	sbrc	r16, 7
+  94:	0c c0       	rjmp	.+24     	; 0xae <__do_clear_bss>
+  96:	95 91       	lpm	r25, Z+
+  98:	85 91       	lpm	r24, Z+
+  9a:	ef 01       	movw	r28, r30
+  9c:	f9 2f       	mov	r31, r25
+  9e:	e8 2f       	mov	r30, r24
+  a0:	05 90       	lpm	r0, Z+
+  a2:	0d 92       	st	X+, r0
+  a4:	a2 17       	cp	r26, r18
+  a6:	b3 07       	cpc	r27, r19
+  a8:	d9 f7       	brne	.-10     	; 0xa0 <__do_copy_data+0x20>
+  aa:	fe 01       	movw	r30, r28
+  ac:	04 c0       	rjmp	.+8      	; 0xb6 <__do_clear_bss+0x8>
+
+000000ae <__do_clear_bss>:
+  ae:	1d 92       	st	X+, r1
+  b0:	a2 17       	cp	r26, r18
+  b2:	b3 07       	cpc	r27, r19
+  b4:	e1 f7       	brne	.-8      	; 0xae <__do_clear_bss>
+  b6:	e4 37       	cpi	r30, 0x74	; 116
+  b8:	f4 07       	cpc	r31, r20
+  ba:	31 f7       	brne	.-52     	; 0x88 <__do_copy_data+0x8>
+  bc:	0e 94 9d 02 	call	0x53a	; 0x53a <main>
+  c0:	0c 94 f9 02 	jmp	0x5f2	; 0x5f2 <exit>
+
+000000c4 <_exit>:
+  c4:	f8 94       	cli
+
+000000c6 <__stop_program>:
+  c6:	ff cf       	rjmp	.-2      	; 0xc6 <__stop_program>
+
+Disassembly of section .text:
+
+0000064e <__bad_interrupt>:
+ 64e:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+
+Disassembly of section .text.Init_Button:
+
+000005b8 <Init_Button>:
+#define BUTTON_PORT PORTD
+#define BUTTON_PIN PIND
+
+uint8_t Init_Button (uint8_t button_num) 
+{
+	BUTTON_DATA &= ~(1<<button_num);
+ 5b8:	9a b1       	in	r25, 0x0a	; 10
+ 5ba:	21 e0       	ldi	r18, 0x01	; 1
+ 5bc:	30 e0       	ldi	r19, 0x00	; 0
+ 5be:	08 2e       	mov	r0, r24
+ 5c0:	02 c0       	rjmp	.+4      	; 0x5c6 <Init_Button+0xe>
+ 5c2:	22 0f       	add	r18, r18
+ 5c4:	33 1f       	adc	r19, r19
+ 5c6:	0a 94       	dec	r0
+ 5c8:	e2 f7       	brpl	.-8      	; 0x5c2 <Init_Button+0xa>
+ 5ca:	32 2f       	mov	r19, r18
+ 5cc:	30 95       	com	r19
+ 5ce:	93 23       	and	r25, r19
+ 5d0:	9a b9       	out	0x0a, r25	; 10
+	BUTTON_PORT |= 1<<(button_num);
+ 5d2:	9b b1       	in	r25, 0x0b	; 11
+ 5d4:	29 2b       	or	r18, r25
+ 5d6:	2b b9       	out	0x0b, r18	; 11
+	return button_num;
+}
+ 5d8:	08 95       	ret
+
+Disassembly of section .text.Reopen_Button_Port:
+
+00000582 <Reopen_Button_Port>:
+
+void Reopen_Button_Port (uint8_t *button_state_num) 
+{
+ 582:	fc 01       	movw	r30, r24
+	BUTTON_DATA &= ~(1<<((*button_state_num) & 0x3F));
+ 584:	4a b1       	in	r20, 0x0a	; 10
+ 586:	90 81       	ld	r25, Z
+ 588:	9f 73       	andi	r25, 0x3F	; 63
+ 58a:	21 e0       	ldi	r18, 0x01	; 1
+ 58c:	30 e0       	ldi	r19, 0x00	; 0
+ 58e:	b9 01       	movw	r22, r18
+ 590:	02 c0       	rjmp	.+4      	; 0x596 <Reopen_Button_Port+0x14>
+ 592:	66 0f       	add	r22, r22
+ 594:	77 1f       	adc	r23, r23
+ 596:	9a 95       	dec	r25
+ 598:	e2 f7       	brpl	.-8      	; 0x592 <Reopen_Button_Port+0x10>
+ 59a:	96 2f       	mov	r25, r22
+ 59c:	90 95       	com	r25
+ 59e:	94 23       	and	r25, r20
+ 5a0:	9a b9       	out	0x0a, r25	; 10
+	BUTTON_PORT |= 1<<((*button_state_num) & 0x3F);
+ 5a2:	9b b1       	in	r25, 0x0b	; 11
+ 5a4:	80 81       	ld	r24, Z
+ 5a6:	8f 73       	andi	r24, 0x3F	; 63
+ 5a8:	02 c0       	rjmp	.+4      	; 0x5ae <Reopen_Button_Port+0x2c>
+ 5aa:	22 0f       	add	r18, r18
+ 5ac:	33 1f       	adc	r19, r19
+ 5ae:	8a 95       	dec	r24
+ 5b0:	e2 f7       	brpl	.-8      	; 0x5aa <Reopen_Button_Port+0x28>
+ 5b2:	29 2b       	or	r18, r25
+ 5b4:	2b b9       	out	0x0b, r18	; 11
+ 5b6:	08 95       	ret
+
+Disassembly of section .text.SamplingButton:
+
+00000474 <SamplingButton>:
+}
+
+uint8_t SamplingButton(uint8_t *button_state_num)
+{
+ 474:	fc 01       	movw	r30, r24
+	uint8_t button = 0;
+	uint8_t button_num = (*button_state_num) & 0x3F;
+ 476:	90 81       	ld	r25, Z
+ 478:	69 2f       	mov	r22, r25
+ 47a:	6f 73       	andi	r22, 0x3F	; 63
+	uint8_t button_state = ((*button_state_num)>>6)& 0x03;
+ 47c:	92 95       	swap	r25
+ 47e:	96 95       	lsr	r25
+ 480:	96 95       	lsr	r25
+ 482:	93 70       	andi	r25, 0x03	; 3
+	if (BUTTON_PIN & (1<<(button_num))){
+ 484:	49 b1       	in	r20, 0x09	; 9
+ 486:	50 e0       	ldi	r21, 0x00	; 0
+ 488:	06 2e       	mov	r0, r22
+ 48a:	02 c0       	rjmp	.+4      	; 0x490 <SamplingButton+0x1c>
+ 48c:	55 95       	asr	r21
+ 48e:	47 95       	ror	r20
+ 490:	0a 94       	dec	r0
+ 492:	e2 f7       	brpl	.-8      	; 0x48c <SamplingButton+0x18>
+ 494:	40 ff       	sbrs	r20, 0
+ 496:	06 c0       	rjmp	.+12     	; 0x4a4 <SamplingButton+0x30>
+		if (button_state == 0) {button_state = 1; button = 0;}
+ 498:	99 23       	and	r25, r25
+ 49a:	61 f0       	breq	.+24     	; 0x4b4 <SamplingButton+0x40>
+		else if (button_state == 1) {button_state = 2; button = 1;}
+ 49c:	91 30       	cpi	r25, 0x01	; 1
+ 49e:	69 f0       	breq	.+26     	; 0x4ba <SamplingButton+0x46>
+		else if (button_state == 2) {button_state = 2; button = 0;}
+ 4a0:	80 e0       	ldi	r24, 0x00	; 0
+ 4a2:	15 c0       	rjmp	.+42     	; 0x4ce <SamplingButton+0x5a>
+	}
+	else {
+		if (button_state == 0) {button_state = 0; button = 0;}
+ 4a4:	99 23       	and	r25, r25
+ 4a6:	61 f0       	breq	.+24     	; 0x4c0 <SamplingButton+0x4c>
+		else if (button_state == 1) {button_state = 0; button = 0;}
+ 4a8:	91 30       	cpi	r25, 0x01	; 1
+ 4aa:	61 f0       	breq	.+24     	; 0x4c4 <SamplingButton+0x50>
+		else if (button_state == 2) {button_state = 0; button = 0;}
+ 4ac:	92 30       	cpi	r25, 0x02	; 2
+ 4ae:	69 f0       	breq	.+26     	; 0x4ca <SamplingButton+0x56>
+	BUTTON_PORT |= 1<<((*button_state_num) & 0x3F);
+}
+
+uint8_t SamplingButton(uint8_t *button_state_num)
+{
+	uint8_t button = 0;
+ 4b0:	80 e0       	ldi	r24, 0x00	; 0
+ 4b2:	0d c0       	rjmp	.+26     	; 0x4ce <SamplingButton+0x5a>
+	uint8_t button_num = (*button_state_num) & 0x3F;
+	uint8_t button_state = ((*button_state_num)>>6)& 0x03;
+	if (BUTTON_PIN & (1<<(button_num))){
+		if (button_state == 0) {button_state = 1; button = 0;}
+ 4b4:	91 e0       	ldi	r25, 0x01	; 1
+ 4b6:	80 e0       	ldi	r24, 0x00	; 0
+ 4b8:	0a c0       	rjmp	.+20     	; 0x4ce <SamplingButton+0x5a>
+		else if (button_state == 1) {button_state = 2; button = 1;}
+ 4ba:	92 e0       	ldi	r25, 0x02	; 2
+ 4bc:	81 e0       	ldi	r24, 0x01	; 1
+ 4be:	07 c0       	rjmp	.+14     	; 0x4ce <SamplingButton+0x5a>
+		else if (button_state == 2) {button_state = 2; button = 0;}
+	}
+	else {
+		if (button_state == 0) {button_state = 0; button = 0;}
+ 4c0:	80 e0       	ldi	r24, 0x00	; 0
+ 4c2:	05 c0       	rjmp	.+10     	; 0x4ce <SamplingButton+0x5a>
+		else if (button_state == 1) {button_state = 0; button = 0;}
+ 4c4:	90 e0       	ldi	r25, 0x00	; 0
+ 4c6:	80 e0       	ldi	r24, 0x00	; 0
+ 4c8:	02 c0       	rjmp	.+4      	; 0x4ce <SamplingButton+0x5a>
+		else if (button_state == 2) {button_state = 0; button = 0;}
+ 4ca:	90 e0       	ldi	r25, 0x00	; 0
+ 4cc:	80 e0       	ldi	r24, 0x00	; 0
+	}
+	*button_state_num = (button_state << 6) | button_num;
+ 4ce:	40 e4       	ldi	r20, 0x40	; 64
+ 4d0:	94 9f       	mul	r25, r20
+ 4d2:	90 01       	movw	r18, r0
+ 4d4:	11 24       	eor	r1, r1
+ 4d6:	26 2b       	or	r18, r22
+ 4d8:	20 83       	st	Z, r18
+	return button;
+ 4da:	08 95       	ret
+
+Disassembly of section .text.watchdogSetup:
+
+00000608 <watchdogSetup>:
+volatile uint8_t rx_data;	
+volatile uint8_t tx_data;
+uint8_t button1;
+
+void watchdogSetup(void){
+	wdt_reset();
+ 608:	a8 95       	wdr
+	WDTCSR |= (1<<WDCE) | (1<<WDE);
+ 60a:	e0 e6       	ldi	r30, 0x60	; 96
+ 60c:	f0 e0       	ldi	r31, 0x00	; 0
+ 60e:	80 81       	ld	r24, Z
+ 610:	88 61       	ori	r24, 0x18	; 24
+ 612:	80 83       	st	Z, r24
+	WDTCSR = (1<<WDIE) | (0<<WDE) | (1<<WDP2) | (1<<WDP0) | (1<<WDP0);  // 0.5s interrupt, no system reset
+ 614:	85 e4       	ldi	r24, 0x45	; 69
+ 616:	80 83       	st	Z, r24
+ 618:	08 95       	ret
+
+Disassembly of section .text.Clear_Port:
+
+0000061a <Clear_Port>:
+}
+	
+
+void Clear_Port (void)
+{
+	DDRB = 0;
+ 61a:	14 b8       	out	0x04, r1	; 4
+	DDRC = 0;
+ 61c:	17 b8       	out	0x07, r1	; 7
+	DDRD = 0;
+ 61e:	1a b8       	out	0x0a, r1	; 10
+	PORTB = 0;
+ 620:	15 b8       	out	0x05, r1	; 5
+	PORTC = 0;
+ 622:	18 b8       	out	0x08, r1	; 8
+	PORTD = 0;
+ 624:	1b b8       	out	0x0b, r1	; 11
+ 626:	08 95       	ret
+
+Disassembly of section .text.__vector_6:
+
+000003f4 <__vector_6>:
+	return;
+}
+
+ISR(WDT_vect,ISR_BLOCK)
+{
+ 3f4:	1f 92       	push	r1
+ 3f6:	0f 92       	push	r0
+ 3f8:	0f b6       	in	r0, 0x3f	; 63
+ 3fa:	0f 92       	push	r0
+ 3fc:	11 24       	eor	r1, r1
+ 3fe:	2f 93       	push	r18
+ 400:	3f 93       	push	r19
+ 402:	4f 93       	push	r20
+ 404:	5f 93       	push	r21
+ 406:	6f 93       	push	r22
+ 408:	7f 93       	push	r23
+ 40a:	8f 93       	push	r24
+ 40c:	9f 93       	push	r25
+ 40e:	af 93       	push	r26
+ 410:	bf 93       	push	r27
+ 412:	ef 93       	push	r30
+ 414:	ff 93       	push	r31
+	Reopen_Button_Port(&button1);
+ 416:	81 e0       	ldi	r24, 0x01	; 1
+ 418:	91 e0       	ldi	r25, 0x01	; 1
+ 41a:	0e 94 c1 02 	call	0x582	; 0x582 <Reopen_Button_Port>
+	power_spi_enable();
+ 41e:	e4 e6       	ldi	r30, 0x64	; 100
+ 420:	f0 e0       	ldi	r31, 0x00	; 0
+ 422:	80 81       	ld	r24, Z
+ 424:	8b 7f       	andi	r24, 0xFB	; 251
+ 426:	80 83       	st	Z, r24
+	Init_RF_Port();
+ 428:	0e 94 ed 02 	call	0x5da	; 0x5da <Init_RF_Port>
+	Init_SPI();
+ 42c:	0e 94 14 03 	call	0x628	; 0x628 <Init_SPI>
+	if (SamplingButton(&button1)) {
+ 430:	81 e0       	ldi	r24, 0x01	; 1
+ 432:	91 e0       	ldi	r25, 0x01	; 1
+ 434:	0e 94 3a 02 	call	0x474	; 0x474 <SamplingButton>
+ 438:	88 23       	and	r24, r24
+ 43a:	49 f0       	breq	.+18     	; 0x44e <__EEPROM_REGION_LENGTH__+0x4e>
+		nrf24_state(POWERUP);
+ 43c:	81 e0       	ldi	r24, 0x01	; 1
+ 43e:	0e 94 06 01 	call	0x20c	; 0x20c <nrf24_state>
+		nrf24_send_message (0xA5);
+ 442:	85 ea       	ldi	r24, 0xA5	; 165
+ 444:	0e 94 82 01 	call	0x304	; 0x304 <nrf24_send_message>
+		nrf24_state(POWERDOWN);
+ 448:	82 e0       	ldi	r24, 0x02	; 2
+ 44a:	0e 94 06 01 	call	0x20c	; 0x20c <nrf24_state>
+	}
+	Clear_Port();
+ 44e:	0e 94 0d 03 	call	0x61a	; 0x61a <Clear_Port>
+}
+ 452:	ff 91       	pop	r31
+ 454:	ef 91       	pop	r30
+ 456:	bf 91       	pop	r27
+ 458:	af 91       	pop	r26
+ 45a:	9f 91       	pop	r25
+ 45c:	8f 91       	pop	r24
+ 45e:	7f 91       	pop	r23
+ 460:	6f 91       	pop	r22
+ 462:	5f 91       	pop	r21
+ 464:	4f 91       	pop	r20
+ 466:	3f 91       	pop	r19
+ 468:	2f 91       	pop	r18
+ 46a:	0f 90       	pop	r0
+ 46c:	0f be       	out	0x3f, r0	; 63
+ 46e:	0f 90       	pop	r0
+ 470:	1f 90       	pop	r1
+ 472:	18 95       	reti
+
+Disassembly of section .text.main:
+
+0000053a <main>:
+
+int main(void)
+{
+	cli();
+ 53a:	f8 94       	cli
+	button1 = Init_Button(2);
+ 53c:	82 e0       	ldi	r24, 0x02	; 2
+ 53e:	0e 94 dc 02 	call	0x5b8	; 0x5b8 <Init_Button>
+ 542:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <button1>
+	Init_SPI();
+ 546:	0e 94 14 03 	call	0x628	; 0x628 <Init_SPI>
+	Init_RF();
+ 54a:	0e 94 64 00 	call	0xc8	; 0xc8 <__data_load_end>
+	watchdogSetup();
+ 54e:	0e 94 04 03 	call	0x608	; 0x608 <watchdogSetup>
+	set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+ 552:	83 b7       	in	r24, 0x33	; 51
+ 554:	81 7f       	andi	r24, 0xF1	; 241
+ 556:	84 60       	ori	r24, 0x04	; 4
+ 558:	83 bf       	out	0x33, r24	; 51
+    while(1)
+    {
+		cli();
+ 55a:	f8 94       	cli
+static __inline void
+__attribute__ ((__always_inline__))
+__power_all_disable()
+{
+#ifdef __AVR_HAVE_PRR
+    PRR |= (uint8_t)(__AVR_HAVE_PRR);
+ 55c:	e4 e6       	ldi	r30, 0x64	; 100
+ 55e:	f0 e0       	ldi	r31, 0x00	; 0
+ 560:	80 81       	ld	r24, Z
+ 562:	8f 6e       	ori	r24, 0xEF	; 239
+ 564:	80 83       	st	Z, r24
+		power_all_disable ();
+        sleep_enable();
+ 566:	83 b7       	in	r24, 0x33	; 51
+ 568:	81 60       	ori	r24, 0x01	; 1
+ 56a:	83 bf       	out	0x33, r24	; 51
+		sleep_bod_disable();
+ 56c:	85 b7       	in	r24, 0x35	; 53
+ 56e:	80 66       	ori	r24, 0x60	; 96
+ 570:	85 bf       	out	0x35, r24	; 53
+ 572:	8f 7d       	andi	r24, 0xDF	; 223
+ 574:	85 bf       	out	0x35, r24	; 53
+		sei();
+ 576:	78 94       	sei
+        sleep_cpu();
+ 578:	88 95       	sleep
+        sleep_disable();
+ 57a:	83 b7       	in	r24, 0x33	; 51
+ 57c:	8e 7f       	andi	r24, 0xFE	; 254
+ 57e:	83 bf       	out	0x33, r24	; 51
+ 580:	ec cf       	rjmp	.-40     	; 0x55a <main+0x20>
+
+Disassembly of section .text.nrf24_send_spi:
+
+000004dc <nrf24_send_spi>:
+#define STANDBY2	6
+
+// Used to store SPI commands
+
+uint8_t nrf24_send_spi(uint8_t register_address, void *data, unsigned int bytes)
+{
+ 4dc:	bf 92       	push	r11
+ 4de:	cf 92       	push	r12
+ 4e0:	df 92       	push	r13
+ 4e2:	ef 92       	push	r14
+ 4e4:	ff 92       	push	r15
+ 4e6:	0f 93       	push	r16
+ 4e8:	1f 93       	push	r17
+ 4ea:	cf 93       	push	r28
+ 4ec:	df 93       	push	r29
+ 4ee:	6b 01       	movw	r12, r22
+ 4f0:	7a 01       	movw	r14, r20
+	uint8_t status;
+	clearbit(RF_PORT,SS);
+ 4f2:	95 b1       	in	r25, 0x05	; 5
+ 4f4:	9b 7f       	andi	r25, 0xFB	; 251
+ 4f6:	95 b9       	out	0x05, r25	; 5
+	status = SPI_MasterTransmit(register_address);
+ 4f8:	0e 94 1a 03 	call	0x634	; 0x634 <SPI_MasterTransmit>
+ 4fc:	b8 2e       	mov	r11, r24
+	for (unsigned int i = 0; i < bytes; i++)
+ 4fe:	c0 e0       	ldi	r28, 0x00	; 0
+ 500:	d0 e0       	ldi	r29, 0x00	; 0
+ 502:	0a c0       	rjmp	.+20     	; 0x518 <nrf24_send_spi+0x3c>
+	((uint8_t*)data)[i] = SPI_MasterTransmit(((uint8_t*)data)[i]);
+ 504:	86 01       	movw	r16, r12
+ 506:	0c 0f       	add	r16, r28
+ 508:	1d 1f       	adc	r17, r29
+ 50a:	f8 01       	movw	r30, r16
+ 50c:	80 81       	ld	r24, Z
+ 50e:	0e 94 1a 03 	call	0x634	; 0x634 <SPI_MasterTransmit>
+ 512:	f8 01       	movw	r30, r16
+ 514:	80 83       	st	Z, r24
+uint8_t nrf24_send_spi(uint8_t register_address, void *data, unsigned int bytes)
+{
+	uint8_t status;
+	clearbit(RF_PORT,SS);
+	status = SPI_MasterTransmit(register_address);
+	for (unsigned int i = 0; i < bytes; i++)
+ 516:	21 96       	adiw	r28, 0x01	; 1
+ 518:	ce 15       	cp	r28, r14
+ 51a:	df 05       	cpc	r29, r15
+ 51c:	98 f3       	brcs	.-26     	; 0x504 <nrf24_send_spi+0x28>
+	((uint8_t*)data)[i] = SPI_MasterTransmit(((uint8_t*)data)[i]);
+	setbit(RF_PORT,SS);
+ 51e:	85 b1       	in	r24, 0x05	; 5
+ 520:	84 60       	ori	r24, 0x04	; 4
+ 522:	85 b9       	out	0x05, r24	; 5
+	return status;
+}
+ 524:	8b 2d       	mov	r24, r11
+ 526:	df 91       	pop	r29
+ 528:	cf 91       	pop	r28
+ 52a:	1f 91       	pop	r17
+ 52c:	0f 91       	pop	r16
+ 52e:	ff 90       	pop	r15
+ 530:	ef 90       	pop	r14
+ 532:	df 90       	pop	r13
+ 534:	cf 90       	pop	r12
+ 536:	bf 90       	pop	r11
+ 538:	08 95       	ret
+
+Disassembly of section .text.nrf24_write:
+
+00000640 <nrf24_write>:
+
+uint8_t nrf24_write(uint8_t register_address, uint8_t *data, unsigned int bytes)
+{
+	return nrf24_send_spi(W_REGISTER | register_address, data, bytes);
+ 640:	80 62       	ori	r24, 0x20	; 32
+ 642:	0e 94 6e 02 	call	0x4dc	; 0x4dc <nrf24_send_spi>
+}
+ 646:	08 95       	ret
+
+Disassembly of section .text.nrf24_read:
+
+00000648 <nrf24_read>:
+
+uint8_t nrf24_read(uint8_t register_address, uint8_t *data, unsigned int bytes)
+{
+	return nrf24_send_spi(R_REGISTER | register_address, data, bytes);
+ 648:	0e 94 6e 02 	call	0x4dc	; 0x4dc <nrf24_send_spi>
+}
+ 64c:	08 95       	ret
+
+Disassembly of section .text.Init_RF_Port:
+
+000005da <Init_RF_Port>:
+
+void Init_RF_Port(void)
+{
+	//setup port
+	DDRB |= (1<<SS)|(1<<CE);
+ 5da:	84 b1       	in	r24, 0x04	; 4
+ 5dc:	85 60       	ori	r24, 0x05	; 5
+ 5de:	84 b9       	out	0x04, r24	; 4
+	clearbit(DDRB,IQR);
+ 5e0:	84 b1       	in	r24, 0x04	; 4
+ 5e2:	8d 7f       	andi	r24, 0xFD	; 253
+ 5e4:	84 b9       	out	0x04, r24	; 4
+	clearbit(PORTB,CE);
+ 5e6:	85 b1       	in	r24, 0x05	; 5
+ 5e8:	8e 7f       	andi	r24, 0xFE	; 254
+ 5ea:	85 b9       	out	0x05, r24	; 5
+	RF_PORT = (1<<IQR)|(1<<SS);
+ 5ec:	86 e0       	ldi	r24, 0x06	; 6
+ 5ee:	85 b9       	out	0x05, r24	; 5
+ 5f0:	08 95       	ret
+
+Disassembly of section .text.Init_RF:
+
+000000c8 <Init_RF>:
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  c8:	0f 93       	push	r16
+  ca:	1f 93       	push	r17
+  cc:	cf 93       	push	r28
+  ce:	df 93       	push	r29
+  d0:	0f 92       	push	r0
+  d2:	cd b7       	in	r28, 0x3d	; 61
+  d4:	de b7       	in	r29, 0x3e	; 62
+  d6:	0e 94 ed 02 	call	0x5da	; 0x5da <Init_RF_Port>
+  da:	85 b1       	in	r24, 0x05	; 5
+  dc:	84 60       	ori	r24, 0x04	; 4
+  de:	85 b9       	out	0x05, r24	; 5
+  e0:	85 b1       	in	r24, 0x05	; 5
+  e2:	8e 7f       	andi	r24, 0xFE	; 254
+  e4:	85 b9       	out	0x05, r24	; 5
+  e6:	87 ea       	ldi	r24, 0xA7	; 167
+  e8:	91 e6       	ldi	r25, 0x61	; 97
+  ea:	01 97       	sbiw	r24, 0x01	; 1
+  ec:	f1 f7       	brne	.-4      	; 0xea <Init_RF+0x22>
+  ee:	00 c0       	rjmp	.+0      	; 0xf0 <Init_RF+0x28>
+  f0:	00 00       	nop
+  f2:	83 e7       	ldi	r24, 0x73	; 115
+  f4:	89 83       	std	Y+1, r24	; 0x01
+  f6:	41 e0       	ldi	r20, 0x01	; 1
+  f8:	50 e0       	ldi	r21, 0x00	; 0
+  fa:	be 01       	movw	r22, r28
+  fc:	6f 5f       	subi	r22, 0xFF	; 255
+  fe:	7f 4f       	sbci	r23, 0xFF	; 255
+ 100:	80 e5       	ldi	r24, 0x50	; 80
+ 102:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 106:	89 e3       	ldi	r24, 0x39	; 57
+ 108:	89 83       	std	Y+1, r24	; 0x01
+ 10a:	41 e0       	ldi	r20, 0x01	; 1
+ 10c:	50 e0       	ldi	r21, 0x00	; 0
+ 10e:	be 01       	movw	r22, r28
+ 110:	6f 5f       	subi	r22, 0xFF	; 255
+ 112:	7f 4f       	sbci	r23, 0xFF	; 255
+ 114:	80 e0       	ldi	r24, 0x00	; 0
+ 116:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 11a:	8f e3       	ldi	r24, 0x3F	; 63
+ 11c:	89 83       	std	Y+1, r24	; 0x01
+ 11e:	41 e0       	ldi	r20, 0x01	; 1
+ 120:	50 e0       	ldi	r21, 0x00	; 0
+ 122:	be 01       	movw	r22, r28
+ 124:	6f 5f       	subi	r22, 0xFF	; 255
+ 126:	7f 4f       	sbci	r23, 0xFF	; 255
+ 128:	81 e0       	ldi	r24, 0x01	; 1
+ 12a:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 12e:	8a e0       	ldi	r24, 0x0A	; 10
+ 130:	89 83       	std	Y+1, r24	; 0x01
+ 132:	41 e0       	ldi	r20, 0x01	; 1
+ 134:	50 e0       	ldi	r21, 0x00	; 0
+ 136:	be 01       	movw	r22, r28
+ 138:	6f 5f       	subi	r22, 0xFF	; 255
+ 13a:	7f 4f       	sbci	r23, 0xFF	; 255
+ 13c:	84 e0       	ldi	r24, 0x04	; 4
+ 13e:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 142:	19 82       	std	Y+1, r1	; 0x01
+ 144:	41 e0       	ldi	r20, 0x01	; 1
+ 146:	50 e0       	ldi	r21, 0x00	; 0
+ 148:	be 01       	movw	r22, r28
+ 14a:	6f 5f       	subi	r22, 0xFF	; 255
+ 14c:	7f 4f       	sbci	r23, 0xFF	; 255
+ 14e:	82 e0       	ldi	r24, 0x02	; 2
+ 150:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 154:	16 e0       	ldi	r17, 0x06	; 6
+ 156:	19 83       	std	Y+1, r17	; 0x01
+ 158:	41 e0       	ldi	r20, 0x01	; 1
+ 15a:	50 e0       	ldi	r21, 0x00	; 0
+ 15c:	be 01       	movw	r22, r28
+ 15e:	6f 5f       	subi	r22, 0xFF	; 255
+ 160:	7f 4f       	sbci	r23, 0xFF	; 255
+ 162:	85 e0       	ldi	r24, 0x05	; 5
+ 164:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 168:	19 83       	std	Y+1, r17	; 0x01
+ 16a:	41 e0       	ldi	r20, 0x01	; 1
+ 16c:	50 e0       	ldi	r21, 0x00	; 0
+ 16e:	be 01       	movw	r22, r28
+ 170:	6f 5f       	subi	r22, 0xFF	; 255
+ 172:	7f 4f       	sbci	r23, 0xFF	; 255
+ 174:	86 e0       	ldi	r24, 0x06	; 6
+ 176:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 17a:	00 e7       	ldi	r16, 0x70	; 112
+ 17c:	09 83       	std	Y+1, r16	; 0x01
+ 17e:	41 e0       	ldi	r20, 0x01	; 1
+ 180:	50 e0       	ldi	r21, 0x00	; 0
+ 182:	be 01       	movw	r22, r28
+ 184:	6f 5f       	subi	r22, 0xFF	; 255
+ 186:	7f 4f       	sbci	r23, 0xFF	; 255
+ 188:	87 e0       	ldi	r24, 0x07	; 7
+ 18a:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 18e:	11 e0       	ldi	r17, 0x01	; 1
+ 190:	19 83       	std	Y+1, r17	; 0x01
+ 192:	41 e0       	ldi	r20, 0x01	; 1
+ 194:	50 e0       	ldi	r21, 0x00	; 0
+ 196:	be 01       	movw	r22, r28
+ 198:	6f 5f       	subi	r22, 0xFF	; 255
+ 19a:	7f 4f       	sbci	r23, 0xFF	; 255
+ 19c:	81 e1       	ldi	r24, 0x11	; 17
+ 19e:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 1a2:	83 e0       	ldi	r24, 0x03	; 3
+ 1a4:	89 83       	std	Y+1, r24	; 0x01
+ 1a6:	41 e0       	ldi	r20, 0x01	; 1
+ 1a8:	50 e0       	ldi	r21, 0x00	; 0
+ 1aa:	be 01       	movw	r22, r28
+ 1ac:	6f 5f       	subi	r22, 0xFF	; 255
+ 1ae:	7f 4f       	sbci	r23, 0xFF	; 255
+ 1b0:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 1b4:	09 83       	std	Y+1, r16	; 0x01
+ 1b6:	40 e0       	ldi	r20, 0x00	; 0
+ 1b8:	50 e0       	ldi	r21, 0x00	; 0
+ 1ba:	60 e0       	ldi	r22, 0x00	; 0
+ 1bc:	70 e0       	ldi	r23, 0x00	; 0
+ 1be:	82 ee       	ldi	r24, 0xE2	; 226
+ 1c0:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 1c4:	40 e0       	ldi	r20, 0x00	; 0
+ 1c6:	50 e0       	ldi	r21, 0x00	; 0
+ 1c8:	60 e0       	ldi	r22, 0x00	; 0
+ 1ca:	70 e0       	ldi	r23, 0x00	; 0
+ 1cc:	81 ee       	ldi	r24, 0xE1	; 225
+ 1ce:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 1d2:	45 e0       	ldi	r20, 0x05	; 5
+ 1d4:	50 e0       	ldi	r21, 0x00	; 0
+ 1d6:	68 e0       	ldi	r22, 0x08	; 8
+ 1d8:	71 e0       	ldi	r23, 0x01	; 1
+ 1da:	8a e0       	ldi	r24, 0x0A	; 10
+ 1dc:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 1e0:	45 e0       	ldi	r20, 0x05	; 5
+ 1e2:	50 e0       	ldi	r21, 0x00	; 0
+ 1e4:	63 e0       	ldi	r22, 0x03	; 3
+ 1e6:	71 e0       	ldi	r23, 0x01	; 1
+ 1e8:	80 e1       	ldi	r24, 0x10	; 16
+ 1ea:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 1ee:	19 83       	std	Y+1, r17	; 0x01
+ 1f0:	41 e0       	ldi	r20, 0x01	; 1
+ 1f2:	50 e0       	ldi	r21, 0x00	; 0
+ 1f4:	be 01       	movw	r22, r28
+ 1f6:	6f 5f       	subi	r22, 0xFF	; 255
+ 1f8:	7f 4f       	sbci	r23, 0xFF	; 255
+ 1fa:	82 e0       	ldi	r24, 0x02	; 2
+ 1fc:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 200:	0f 90       	pop	r0
+ 202:	df 91       	pop	r29
+ 204:	cf 91       	pop	r28
+ 206:	1f 91       	pop	r17
+ 208:	0f 91       	pop	r16
+ 20a:	08 95       	ret
+
+Disassembly of section .text.nrf24_state:
+
+0000020c <nrf24_state>:
+ 20c:	1f 93       	push	r17
+ 20e:	cf 93       	push	r28
+ 210:	df 93       	push	r29
+ 212:	00 d0       	rcall	.+0      	; 0x214 <nrf24_state+0x8>
+ 214:	cd b7       	in	r28, 0x3d	; 61
+ 216:	de b7       	in	r29, 0x3e	; 62
+ 218:	18 2f       	mov	r17, r24
+ 21a:	41 e0       	ldi	r20, 0x01	; 1
+ 21c:	50 e0       	ldi	r21, 0x00	; 0
+ 21e:	be 01       	movw	r22, r28
+ 220:	6e 5f       	subi	r22, 0xFE	; 254
+ 222:	7f 4f       	sbci	r23, 0xFF	; 255
+ 224:	80 e0       	ldi	r24, 0x00	; 0
+ 226:	0e 94 24 03 	call	0x648	; 0x648 <nrf24_read>
+ 22a:	13 30       	cpi	r17, 0x03	; 3
+ 22c:	71 f1       	breq	.+92     	; 0x28a <nrf24_state+0x7e>
+ 22e:	28 f4       	brcc	.+10     	; 0x23a <nrf24_state+0x2e>
+ 230:	11 30       	cpi	r17, 0x01	; 1
+ 232:	59 f0       	breq	.+22     	; 0x24a <nrf24_state+0x3e>
+ 234:	12 30       	cpi	r17, 0x02	; 2
+ 236:	e9 f0       	breq	.+58     	; 0x272 <nrf24_state+0x66>
+ 238:	5f c0       	rjmp	.+190    	; 0x2f8 <nrf24_state+0xec>
+ 23a:	15 30       	cpi	r17, 0x05	; 5
+ 23c:	09 f4       	brne	.+2      	; 0x240 <nrf24_state+0x34>
+ 23e:	47 c0       	rjmp	.+142    	; 0x2ce <nrf24_state+0xc2>
+ 240:	d0 f1       	brcs	.+116    	; 0x2b6 <nrf24_state+0xaa>
+ 242:	16 30       	cpi	r17, 0x06	; 6
+ 244:	09 f4       	brne	.+2      	; 0x248 <nrf24_state+0x3c>
+ 246:	47 c0       	rjmp	.+142    	; 0x2d6 <nrf24_state+0xca>
+ 248:	57 c0       	rjmp	.+174    	; 0x2f8 <nrf24_state+0xec>
+ 24a:	8a 81       	ldd	r24, Y+2	; 0x02
+ 24c:	81 fd       	sbrc	r24, 1
+ 24e:	54 c0       	rjmp	.+168    	; 0x2f8 <nrf24_state+0xec>
+ 250:	82 60       	ori	r24, 0x02	; 2
+ 252:	89 83       	std	Y+1, r24	; 0x01
+ 254:	41 e0       	ldi	r20, 0x01	; 1
+ 256:	50 e0       	ldi	r21, 0x00	; 0
+ 258:	be 01       	movw	r22, r28
+ 25a:	6f 5f       	subi	r22, 0xFF	; 255
+ 25c:	7f 4f       	sbci	r23, 0xFF	; 255
+ 25e:	80 e0       	ldi	r24, 0x00	; 0
+ 260:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 264:	83 ef       	ldi	r24, 0xF3	; 243
+ 266:	91 e0       	ldi	r25, 0x01	; 1
+ 268:	01 97       	sbiw	r24, 0x01	; 1
+ 26a:	f1 f7       	brne	.-4      	; 0x268 <nrf24_state+0x5c>
+ 26c:	00 c0       	rjmp	.+0      	; 0x26e <nrf24_state+0x62>
+ 26e:	00 00       	nop
+ 270:	43 c0       	rjmp	.+134    	; 0x2f8 <nrf24_state+0xec>
+ 272:	8a 81       	ldd	r24, Y+2	; 0x02
+ 274:	8d 7f       	andi	r24, 0xFD	; 253
+ 276:	89 83       	std	Y+1, r24	; 0x01
+ 278:	41 e0       	ldi	r20, 0x01	; 1
+ 27a:	50 e0       	ldi	r21, 0x00	; 0
+ 27c:	be 01       	movw	r22, r28
+ 27e:	6f 5f       	subi	r22, 0xFF	; 255
+ 280:	7f 4f       	sbci	r23, 0xFF	; 255
+ 282:	80 e0       	ldi	r24, 0x00	; 0
+ 284:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 288:	37 c0       	rjmp	.+110    	; 0x2f8 <nrf24_state+0xec>
+ 28a:	8a 81       	ldd	r24, Y+2	; 0x02
+ 28c:	81 60       	ori	r24, 0x01	; 1
+ 28e:	89 83       	std	Y+1, r24	; 0x01
+ 290:	41 e0       	ldi	r20, 0x01	; 1
+ 292:	50 e0       	ldi	r21, 0x00	; 0
+ 294:	be 01       	movw	r22, r28
+ 296:	6f 5f       	subi	r22, 0xFF	; 255
+ 298:	7f 4f       	sbci	r23, 0xFF	; 255
+ 29a:	80 e0       	ldi	r24, 0x00	; 0
+ 29c:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 2a0:	80 e7       	ldi	r24, 0x70	; 112
+ 2a2:	89 83       	std	Y+1, r24	; 0x01
+ 2a4:	41 e0       	ldi	r20, 0x01	; 1
+ 2a6:	50 e0       	ldi	r21, 0x00	; 0
+ 2a8:	be 01       	movw	r22, r28
+ 2aa:	6f 5f       	subi	r22, 0xFF	; 255
+ 2ac:	7f 4f       	sbci	r23, 0xFF	; 255
+ 2ae:	87 e0       	ldi	r24, 0x07	; 7
+ 2b0:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 2b4:	21 c0       	rjmp	.+66     	; 0x2f8 <nrf24_state+0xec>
+ 2b6:	8a 81       	ldd	r24, Y+2	; 0x02
+ 2b8:	8e 7f       	andi	r24, 0xFE	; 254
+ 2ba:	89 83       	std	Y+1, r24	; 0x01
+ 2bc:	41 e0       	ldi	r20, 0x01	; 1
+ 2be:	50 e0       	ldi	r21, 0x00	; 0
+ 2c0:	be 01       	movw	r22, r28
+ 2c2:	6f 5f       	subi	r22, 0xFF	; 255
+ 2c4:	7f 4f       	sbci	r23, 0xFF	; 255
+ 2c6:	80 e0       	ldi	r24, 0x00	; 0
+ 2c8:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 2cc:	15 c0       	rjmp	.+42     	; 0x2f8 <nrf24_state+0xec>
+ 2ce:	85 b1       	in	r24, 0x05	; 5
+ 2d0:	8e 7f       	andi	r24, 0xFE	; 254
+ 2d2:	85 b9       	out	0x05, r24	; 5
+ 2d4:	11 c0       	rjmp	.+34     	; 0x2f8 <nrf24_state+0xec>
+ 2d6:	8a 81       	ldd	r24, Y+2	; 0x02
+ 2d8:	8e 7f       	andi	r24, 0xFE	; 254
+ 2da:	89 83       	std	Y+1, r24	; 0x01
+ 2dc:	41 e0       	ldi	r20, 0x01	; 1
+ 2de:	50 e0       	ldi	r21, 0x00	; 0
+ 2e0:	be 01       	movw	r22, r28
+ 2e2:	6f 5f       	subi	r22, 0xFF	; 255
+ 2e4:	7f 4f       	sbci	r23, 0xFF	; 255
+ 2e6:	80 e0       	ldi	r24, 0x00	; 0
+ 2e8:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+ 2ec:	85 b1       	in	r24, 0x05	; 5
+ 2ee:	81 60       	ori	r24, 0x01	; 1
+ 2f0:	85 b9       	out	0x05, r24	; 5
+ 2f2:	92 e3       	ldi	r25, 0x32	; 50
+ 2f4:	9a 95       	dec	r25
+ 2f6:	f1 f7       	brne	.-4      	; 0x2f4 <nrf24_state+0xe8>
+ 2f8:	0f 90       	pop	r0
+ 2fa:	0f 90       	pop	r0
+ 2fc:	df 91       	pop	r29
+ 2fe:	cf 91       	pop	r28
+ 300:	1f 91       	pop	r17
+ 302:	08 95       	ret
+
+Disassembly of section .text.nrf24_send_message:
+
+00000304 <nrf24_send_message>:
+	setbit(RF_PORT,CE);
+	_delay_us(150);						// Settling time
+}
+
+uint8_t nrf24_send_message(uint8_t message)
+{
+ 304:	1f 93       	push	r17
+ 306:	cf 93       	push	r28
+ 308:	df 93       	push	r29
+ 30a:	0f 92       	push	r0
+ 30c:	cd b7       	in	r28, 0x3d	; 61
+ 30e:	de b7       	in	r29, 0x3e	; 62
+ 310:	18 2f       	mov	r17, r24
+	uint8_t data;
+	// Flush TX/RX and clear TX interrupt
+	nrf24_write(FLUSH_RX,0,0);
+ 312:	40 e0       	ldi	r20, 0x00	; 0
+ 314:	50 e0       	ldi	r21, 0x00	; 0
+ 316:	60 e0       	ldi	r22, 0x00	; 0
+ 318:	70 e0       	ldi	r23, 0x00	; 0
+ 31a:	82 ee       	ldi	r24, 0xE2	; 226
+ 31c:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+	nrf24_write(FLUSH_TX,0,0);
+ 320:	40 e0       	ldi	r20, 0x00	; 0
+ 322:	50 e0       	ldi	r21, 0x00	; 0
+ 324:	60 e0       	ldi	r22, 0x00	; 0
+ 326:	70 e0       	ldi	r23, 0x00	; 0
+ 328:	81 ee       	ldi	r24, 0xE1	; 225
+ 32a:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+	data = (1 << TX_DS)|(1<<MAX_RT);
+ 32e:	80 e3       	ldi	r24, 0x30	; 48
+ 330:	89 83       	std	Y+1, r24	; 0x01
+	nrf24_write(STATUS,&data,1);
+ 332:	41 e0       	ldi	r20, 0x01	; 1
+ 334:	50 e0       	ldi	r21, 0x00	; 0
+ 336:	be 01       	movw	r22, r28
+ 338:	6f 5f       	subi	r22, 0xFF	; 255
+ 33a:	7f 4f       	sbci	r23, 0xFF	; 255
+ 33c:	87 e0       	ldi	r24, 0x07	; 7
+ 33e:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+	
+	// Disable interrupt on RX
+	nrf24_read(CONFIG,&data,1);
+ 342:	41 e0       	ldi	r20, 0x01	; 1
+ 344:	50 e0       	ldi	r21, 0x00	; 0
+ 346:	be 01       	movw	r22, r28
+ 348:	6f 5f       	subi	r22, 0xFF	; 255
+ 34a:	7f 4f       	sbci	r23, 0xFF	; 255
+ 34c:	80 e0       	ldi	r24, 0x00	; 0
+ 34e:	0e 94 24 03 	call	0x648	; 0x648 <nrf24_read>
+	data |= (1 << MASK_RX_DR);
+ 352:	89 81       	ldd	r24, Y+1	; 0x01
+ 354:	80 64       	ori	r24, 0x40	; 64
+ 356:	89 83       	std	Y+1, r24	; 0x01
+	nrf24_write(CONFIG,&data,1);
+ 358:	41 e0       	ldi	r20, 0x01	; 1
+ 35a:	50 e0       	ldi	r21, 0x00	; 0
+ 35c:	be 01       	movw	r22, r28
+ 35e:	6f 5f       	subi	r22, 0xFF	; 255
+ 360:	7f 4f       	sbci	r23, 0xFF	; 255
+ 362:	80 e0       	ldi	r24, 0x00	; 0
+ 364:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+	
+	// Start SPI, load message into TX_PAYLOAD
+	clearbit(RF_PORT,SS);
+ 368:	85 b1       	in	r24, 0x05	; 5
+ 36a:	8b 7f       	andi	r24, 0xFB	; 251
+ 36c:	85 b9       	out	0x05, r24	; 5
+	if (AUTO_ACK) SPI_MasterTransmit(W_TX_PAYLOAD);
+ 36e:	80 ea       	ldi	r24, 0xA0	; 160
+ 370:	0e 94 1a 03 	call	0x634	; 0x634 <SPI_MasterTransmit>
+	else SPI_MasterTransmit(W_TX_PAYLOAD_NOACK);
+	SPI_MasterTransmit(message);
+ 374:	81 2f       	mov	r24, r17
+ 376:	0e 94 1a 03 	call	0x634	; 0x634 <SPI_MasterTransmit>
+	setbit(RF_PORT,SS);
+ 37a:	85 b1       	in	r24, 0x05	; 5
+ 37c:	84 60       	ori	r24, 0x04	; 4
+ 37e:	85 b9       	out	0x05, r24	; 5
+	
+	// Transmit mode
+	nrf24_state(TRANSMIT);
+ 380:	84 e0       	ldi	r24, 0x04	; 4
+ 382:	0e 94 06 01 	call	0x20c	; 0x20c <nrf24_state>
+	
+	// Send message by pulling CE high for more than 10us
+	setbit(RF_PORT,CE);
+ 386:	85 b1       	in	r24, 0x05	; 5
+ 388:	81 60       	ori	r24, 0x01	; 1
+ 38a:	85 b9       	out	0x05, r24	; 5
+ 38c:	86 e0       	ldi	r24, 0x06	; 6
+ 38e:	8a 95       	dec	r24
+ 390:	f1 f7       	brne	.-4      	; 0x38e <nrf24_send_message+0x8a>
+ 392:	00 c0       	rjmp	.+0      	; 0x394 <nrf24_send_message+0x90>
+	_delay_us(20);
+	clearbit(RF_PORT,CE);
+ 394:	85 b1       	in	r24, 0x05	; 5
+ 396:	8e 7f       	andi	r24, 0xFE	; 254
+ 398:	85 b9       	out	0x05, r24	; 5
+	
+	// Wait for message to be sent (TX_DS flag raised)
+	nrf24_read(STATUS,&data,1);
+ 39a:	41 e0       	ldi	r20, 0x01	; 1
+ 39c:	50 e0       	ldi	r21, 0x00	; 0
+ 39e:	be 01       	movw	r22, r28
+ 3a0:	6f 5f       	subi	r22, 0xFF	; 255
+ 3a2:	7f 4f       	sbci	r23, 0xFF	; 255
+ 3a4:	87 e0       	ldi	r24, 0x07	; 7
+ 3a6:	0e 94 24 03 	call	0x648	; 0x648 <nrf24_read>
+	while((data & ((1 << TX_DS)|(1<<MAX_RT)))==0) nrf24_read(STATUS,&data,1);
+ 3aa:	08 c0       	rjmp	.+16     	; 0x3bc <nrf24_send_message+0xb8>
+ 3ac:	41 e0       	ldi	r20, 0x01	; 1
+ 3ae:	50 e0       	ldi	r21, 0x00	; 0
+ 3b0:	be 01       	movw	r22, r28
+ 3b2:	6f 5f       	subi	r22, 0xFF	; 255
+ 3b4:	7f 4f       	sbci	r23, 0xFF	; 255
+ 3b6:	87 e0       	ldi	r24, 0x07	; 7
+ 3b8:	0e 94 24 03 	call	0x648	; 0x648 <nrf24_read>
+ 3bc:	89 81       	ldd	r24, Y+1	; 0x01
+ 3be:	80 73       	andi	r24, 0x30	; 48
+ 3c0:	a9 f3       	breq	.-22     	; 0x3ac <nrf24_send_message+0xa8>
+	
+	// Enable interrupt on RX
+	nrf24_read(CONFIG,&data,1);
+ 3c2:	41 e0       	ldi	r20, 0x01	; 1
+ 3c4:	50 e0       	ldi	r21, 0x00	; 0
+ 3c6:	be 01       	movw	r22, r28
+ 3c8:	6f 5f       	subi	r22, 0xFF	; 255
+ 3ca:	7f 4f       	sbci	r23, 0xFF	; 255
+ 3cc:	80 e0       	ldi	r24, 0x00	; 0
+ 3ce:	0e 94 24 03 	call	0x648	; 0x648 <nrf24_read>
+	data &= ~(1 << MASK_RX_DR);
+ 3d2:	89 81       	ldd	r24, Y+1	; 0x01
+ 3d4:	8f 7b       	andi	r24, 0xBF	; 191
+ 3d6:	89 83       	std	Y+1, r24	; 0x01
+	nrf24_write(CONFIG,&data,1);
+ 3d8:	41 e0       	ldi	r20, 0x01	; 1
+ 3da:	50 e0       	ldi	r21, 0x00	; 0
+ 3dc:	be 01       	movw	r22, r28
+ 3de:	6f 5f       	subi	r22, 0xFF	; 255
+ 3e0:	7f 4f       	sbci	r23, 0xFF	; 255
+ 3e2:	80 e0       	ldi	r24, 0x00	; 0
+ 3e4:	0e 94 20 03 	call	0x640	; 0x640 <nrf24_write>
+	
+	return 1;
+}
+ 3e8:	81 e0       	ldi	r24, 0x01	; 1
+ 3ea:	0f 90       	pop	r0
+ 3ec:	df 91       	pop	r29
+ 3ee:	cf 91       	pop	r28
+ 3f0:	1f 91       	pop	r17
+ 3f2:	08 95       	ret
+
+Disassembly of section .text.Init_SPI:
+
+00000628 <Init_SPI>:
+#define MOSI 3
+#define MISO 4
+#define SCK 5
+void Init_SPI (void)
+{
+	DDRB |= (1<<MOSI)|(1<<SCK); //SCK, MOSI as output
+ 628:	84 b1       	in	r24, 0x04	; 4
+ 62a:	88 62       	ori	r24, 0x28	; 40
+ 62c:	84 b9       	out	0x04, r24	; 4
+	SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPI2X); //Enable SPI, Master, set clock rate fclk/2 = 4MHz
+ 62e:	81 e5       	ldi	r24, 0x51	; 81
+ 630:	8c bd       	out	0x2c, r24	; 44
+ 632:	08 95       	ret
+
+Disassembly of section .text.SPI_MasterTransmit:
+
+00000634 <SPI_MasterTransmit>:
+}
+
+uint8_t SPI_MasterTransmit(uint8_t transmit_data)
+{
+	SPDR = transmit_data;
+ 634:	8e bd       	out	0x2e, r24	; 46
+	while(!(SPSR & (1<<SPIF))) {}
+ 636:	0d b4       	in	r0, 0x2d	; 45
+ 638:	07 fe       	sbrs	r0, 7
+ 63a:	fd cf       	rjmp	.-6      	; 0x636 <SPI_MasterTransmit+0x2>
+	return SPDR;	//take receive data
+ 63c:	8e b5       	in	r24, 0x2e	; 46
+ 63e:	08 95       	ret
+
+Disassembly of section .text.__dummy_fini:
+
+00000656 <_fini>:
+ 656:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+00000658 <__funcs_on_exit>:
+ 658:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+0000065a <__simulator_exit>:
+ 65a:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+000005f2 <exit>:
+ 5f2:	ec 01       	movw	r28, r24
+ 5f4:	0e 94 2c 03 	call	0x658	; 0x658 <__funcs_on_exit>
+ 5f8:	0e 94 2b 03 	call	0x656	; 0x656 <_fini>
+ 5fc:	ce 01       	movw	r24, r28
+ 5fe:	0e 94 2d 03 	call	0x65a	; 0x65a <__simulator_exit>
+ 602:	ce 01       	movw	r24, r28
+ 604:	0e 94 29 03 	call	0x652	; 0x652 <_Exit>
+
+Disassembly of section .text._Exit:
+
+00000652 <_Exit>:
+ 652:	0e 94 62 00 	call	0xc4	; 0xc4 <_exit>
