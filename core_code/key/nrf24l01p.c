@@ -31,7 +31,7 @@ uint8_t tx_address[5] = { 0xe7, 0xe7, 0xe7, 0xe7, 0xe7 };	// Write pipe address
 //
 #define AUTO_ACK		1								// Auto acknowledgment
 #define DATARATE		RF_DR_1MBPS							// 250kbps, 1mbps, 2mbps
-#define POWER			POWER_MIN							// Set power (MAX 0dBm..HIGH -6dBm..LOW -12dBm.. MIN -18dBm)
+#define POWER			POWER_MAX							// Set power (MAX 0dBm..HIGH -6dBm..LOW -12dBm.. MIN -18dBm)
 #define CHANNEL			6								// 2.4GHz-2.5GHz channel selection (0x01 - 0x7C)
 #define DATA_LENGTH		1									//in byte
 #define ADDR_LENGTH		3

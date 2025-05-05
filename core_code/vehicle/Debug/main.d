@@ -18,6 +18,8 @@ main.d main.o: .././main.c \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay_basic.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h \
  c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\stdbool.h \
+ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\eeprom.h \
+ c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\stddef.h \
  .././nrf24l01-mnemonics.h .././QoL.h .././nrf24l01p.h .././spi.h
 
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\io.h:
@@ -57,6 +59,10 @@ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay_basic.h:
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h:
 
 c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\stdbool.h:
+
+c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\eeprom.h:
+
+c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\stddef.h:
 
 .././nrf24l01-mnemonics.h:
 

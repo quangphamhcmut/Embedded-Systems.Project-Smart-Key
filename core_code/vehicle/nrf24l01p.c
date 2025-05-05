@@ -288,3 +288,10 @@ uint8_t nrf24_read_message()
 	setbit(RF_PORT,CE);
 	return rx_message;
 }
+
+uint8_t nrf24_RX_power() 
+{
+	uint8_t data; 
+	nrf24_read(RPD, &data, 1);
+	return data;
+}
