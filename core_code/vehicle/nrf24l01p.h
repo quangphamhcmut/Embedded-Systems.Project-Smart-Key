@@ -21,6 +21,7 @@ void nrf24_state(uint8_t state);
 void nrf24_start_listening(void);
 uint8_t nrf24_send_message(uint8_t message);
 uint8_t nrf24_read_message();
+uint8_t nrf24_RX_power(); 
 
 //define output
 #define SS 2
